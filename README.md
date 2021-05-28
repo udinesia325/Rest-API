@@ -35,7 +35,7 @@ https://github.com/udinesia325/Rest-API.git
 ## Penggunaan
 
 # GET
-- method ini dapat menampilkan semua data yang ada di API INI
+- method ini dapat menampilkan semua data yang ada di API ini
 ## Endpoint
 ```
 http://localhost:3000/
@@ -53,9 +53,20 @@ http://localhost:3000/
 - aturan parameter 
 ## EndPoint
 ```
-http://localhost:3000/{id}/{nama}/{umur}
+http://localhost:3000/{id}
+{
+nama:{namaUser},
+umur:{umurUser}
+}
 ```
-- contoh http://localhost:3000/2/Riska/16
+- contoh
+```
+ http://localhost:3000/2
+{  
+nama:Riska,
+umur:16
+}
+```
 - maka di dalam API akan bertambah data seperti ini
 ```
 {
@@ -65,14 +76,27 @@ http://localhost:3000/{id}/{nama}/{umur}
  }
 ```
 - dan silahkan cek dengan Endpoint GET
+## Catatan
+- tanda kurung setelah url endpoint itu yang saya maksud adalah body request,  seperti dalam form
 # PUT
 - method ini dapat mengubah isi dari data API
 ## EndPoint
 ```
- http://localhost:3000/{idYangTelahAda}/{nama}/{umur}
+ http://localhost:3000/{idYangTelahAda}
+{
+nama:{namaBaru},
+umur:{umurBaru}
+}
 ```
-- maka API akan merubah isi data dengan id yang telah ada 
-- contoh http://localhost:3000/2/Riska_Mitta/16
+- maka API akan merubah isi data dengan id yang telah ada dan berdasarkan request body yang dikirimkan, 
+- contoh
+```
+ http://localhost:3000/2
+{
+nama:Riska Mitta, 
+umur:16
+}
+```
 - maka data awal yang seperti ini
 ```
 { 
@@ -86,12 +110,13 @@ http://localhost:3000/{id}/{nama}/{umur}
 ```
 {
 "id":"2",
-"nama":"Riska_Mitta",
+"nama":"Riska Mitta",
 "umur":"16"
  }
 ```
 ## Catatan
 - id di dalam API ini bersifat permanen dan tidak dapat di ubah
+- tanda kurung yang saya tambahkan setelah endpoint itu adalah request body ya!! 
 # DELETE
 - method ini dapat menghapus data di dalam API berdasarkan id
 ## EndPoint
@@ -110,4 +135,117 @@ http://localhost:3000/{id}/{nama}/{umur}
 
 
 #### Jangan Lupa Titik Koma !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
